@@ -1,10 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
 
-.footer {
-    position: fixed;
-    margin: auto;
-    bottom: 20px;
-    width: 80%;
-    color: white;
-    text-align: center;
- }
+body{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+#chatLists, #playGround{
+	height: 100%;
+	padding: 0;
+}
+
+#chatLists{
+	background-color: #6B6E94;
+}
+
+.containerWrapper {
+    padding: 0;
+    height: 91vh;
+}
+
+#messageBody{
+	margin: 0;
+	padding: 0;
+	height: 90%;
+}

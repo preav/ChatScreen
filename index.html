@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Slack#</title>
+  <title>Slack</title>
 </head>
 
 <body>
-  <!-- Nvigation bar -->
-  <header class="navigationBar">
+  <!-- Navigation bar -->
+  <header class="navigationBar" id="navBar">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Slack#</a>
+      <a class="navbar-brand" href="#">Slack</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBarId" aria-controls="navigationBarId"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,20 +49,12 @@
     </nav>
   </header>
 
-  <div class="container">
-    <div id="playGround"></div>
-
-
-
-    <div class="footer">
-      <div class="commandLineInput" id="commandLineInput">
-        <input class="form-control form-control-lg" type="text" id="enteredCommand" placeholder="Message #channel...">
-      </div>
-    </div>
+  <div class="container-fluid d-flex text-left containerWrapper">
+    <section id="chatLists" class="col-xs-5 col-sm-3"></section>
+    <section id="playGround" class="col-xs-7 col-sm-9 d-flex flex-wrap">
+        <div id="messageBody" class="order-1 flex-grow-1">dfsgdfg</div>
+        <input class="form-control form-control-lg align-self-end order-2" type="text" id="enteredCommand" placeholder="Type your message here...">
+    </section>
   </div>
-
-
-  <script src="client/public/bundle.js"></script>
 </body>
-
 </html>
