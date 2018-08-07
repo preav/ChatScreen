@@ -11,11 +11,10 @@
 <body>
   <!-- Navigation bar -->
   <header class="navigationBar" id="navBar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Slack</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBarId" aria-controls="navigationBarId"
+    <nav class="navbar navbar-fixed-top navbar-dark bg-dark navbar-expand-sm">
+      <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navigationBarId" aria-controls="navigationBarId"
         aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+       <a class="navbar-brand" href="#"> Slack </a>
       </button>
 
       <div class="collapse navbar-collapse" id="navigationBarId">
@@ -51,9 +50,9 @@
 
   <div class="container-fluid d-flex text-left containerWrapper">
     <section id="chatLists" class="col-xs-5 col-sm-3"></section>
-    <section id="playGround" class="col-xs-7 col-sm-9 d-flex flex-wrap">
-        <div id="messageBody" class="order-1 flex-grow-1">dfsgdfg</div>
-        <input class="form-control form-control-lg align-self-end order-2" type="text" id="enteredCommand" placeholder="Type your message here...">
+    <section id="playGround" class="col-xs-7 col-sm-9 d-flex">
+        <div id="messageBody"></div>
+        <input class="form-control form-control-lg" type="text" id="enteredCommand" placeholder="Type your message here...">
     </section>
   </div>
 </body>
