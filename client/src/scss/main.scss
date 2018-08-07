@@ -1,16 +1,69 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~emojionearea/dist/emojionearea.css';
 
-.footer {
-    position: fixed;
-    margin: auto;
-    bottom: 20px;
-    width: 80%;
-    color: white;
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+#chatLists, #playGround{
+    height: 100%;
+    padding: 0;
+    border: 1px solid blue;
+    width: 100%;
+}
+
+#chatLists{
+    background-color: #6B6E94;
+}
+
+#playGround{
+    padding: 0 5px 0 5px;
+}
+
+.containerWrapper {
+    padding: 0;
+    height: 90vh;
+}
+
+#messageBody{
+   border: 1px solid black;
+   width: 100%;
+   height: 90%;
+   padding: 2px;
+}
+
+// #enteredCommand{
+//     margin: 2px;
+// }
+
+.container-fluid{
+    padding: 0;
+    border: 1px solid red;
     text-align: center;
+}
+
+.containerWrapper {
+    // position: fixed;
+    // margin: auto;
+    // bottom: 20px;
+    width: 100%;
+    // color: white;
+    text-align: center;
+    padding: 0;
+    height: 80vh;
  }
 
- .panBackground {
+ #enter{
+    font-size: 0.8rem;
+ }
+
+ #textArea{
+    margin-bottom: 0px;
+ }
+
+.panBackground {
     background: wheat;
 }
 
@@ -35,32 +88,32 @@
     color:#fff;
 }
 
-.commandComment {
-    width: 500px;
-    height: 50px;
-}
+// .commandComment {
+//     width: 500px;
+//     height: 50px;
+// }
 
-#playGround {
-    display: block;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 4px;
-    color: #333;
-    word-wrap: break-word;
-    margin: .5rem 0 .2rem;
-    font-size: .75rem;
-    line-height: 1.15rem;
-    background: #f9f9f9;
-    font-family: Monaco,Menlo,Consolas,"Courier New",monospace!important;
-    padding: .5rem;
-    -webkit-font-variant-ligatures: none;
-    font-variant-ligatures: none;
-    word-break: normal;
-    tab-size: 4;
-    float:left;
-    width:80%;
-    overflow-y: auto;
-    height: 600px;
-}
+// #playGround {
+//     display: block;
+//     border: 1px solid rgba(0,0,0,.15);
+//     border-radius: 4px;
+//     color: #333;
+//     word-wrap: break-word;
+//     margin: .5rem 0 .2rem;
+//     font-size: .75rem;
+//     line-height: 1.15rem;
+//     background: #f9f9f9;
+//     font-family: Monaco,Menlo,Consolas,"Courier New",monospace!important;
+//     padding: .5rem;
+//     -webkit-font-variant-ligatures: none;
+//     font-variant-ligatures: none;
+//     word-break: normal;
+//     tab-size: 4;
+//     float:left;
+//     width:80%;
+//     overflow-y: auto;
+//     height: 600px;
+// }
 
 .playGroungDiv-bot{
     background: wheat;
@@ -109,10 +162,6 @@
 
 .output {
     font: 1rem 'Fira Sans', sans-serif;
-}
-
-input {
-    margin: .4rem;
 }
 
 label {

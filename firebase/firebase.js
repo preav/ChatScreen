@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-//SUSHMA
+// SUSHMA
 // const config = {
 //   apiKey: 'AIzaSyCCGyDmn1eBE-kJdy3uJ9m5Zui6I06YyBo',
 //   authDomain: 'slackxt-notifications.firebaseapp.com',
@@ -12,40 +12,31 @@ import firebase from 'firebase';
 // firebase.initializeApp(config);
 
 // Initialize Firebase ANIL KUMAR
-var config = {
-  apiKey: "AIzaSyBXSX7MSICIhesYDQa0Rsa8z4h29pfLvDI",
-  authDomain: "chatapp-19fa7.firebaseapp.com",
-  databaseURL: "https://chatapp-19fa7.firebaseio.com",
-  projectId: "chatapp-19fa7",
-  storageBucket: "chatapp-19fa7.appspot.com",
-  messagingSenderId: "648696728261"
+const config = {
+  apiKey: 'AIzaSyBXSX7MSICIhesYDQa0Rsa8z4h29pfLvDI',
+  authDomain: 'chatapp-19fa7.firebaseapp.com',
+  databaseURL: 'https://chatapp-19fa7.firebaseio.com',
+  projectId: 'chatapp-19fa7',
+  storageBucket: 'chatapp-19fa7.appspot.com',
+  messagingSenderId: '648696728261',
 };
 firebase.initializeApp(config);
 
 
-
 function getMessagesFromFireBase(startDate, endDate) {
-  alert("startDate"+ startDate, endDate +"endDate"+ endDate);
+  alert(`startDate${startDate}`, `${endDate}endDate${endDate}`);
   const rootRef = firebase.database().ref('team001');
   const userlist = rootRef.child('conversations').child('userID001').child('messages');
-  userlist.on('value', (userDetails) => {    
-    userDetails.forEach((user) => {     
-      const name = user.child('name').val();      
-      const usermsgbody = user.child('body');  
-       const text= usermsgbody.child('text').val() + " "+usermsgbody.child('firebaseTimestamp').val();      
-       
-      
-       document.querySelector('#playGround').appendChild(createSearchResult(name,text)); 
-      
-      
-    });   
+  userlist.on('value', (userDetails) => {
+    userDetails.forEach((user) => {
+      const name = user.child('name').val();
+      const usermsgbody = user.child('body');
+      const text = `${usermsgbody.child('text').val()} ${usermsgbody.child('firebaseTimestamp').val()}`;
 
+
+      document.querySelector('#playGround').appendChild(createSearchResult(name, text));
+    });
   });
-
-
-
-
-
 
 
 /*  newRoot.on('value', (snapshot) => {
@@ -95,7 +86,7 @@ function createHTMLElement(html) {
   template.innerHTML = html;
   return template.content.firstElementChild;
 }
-function createSearchResult(user,text) {
+function createSearchResult(user, text) {
   const createResultTemplateTxt = ` <div class="border container tab-pane" aria-labelledby="pills-home-tab" id="createRepo">
 <button type="button" class="close" aria-label="Close">
 <span aria-hidden="true">&times;</span>

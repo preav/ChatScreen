@@ -10,15 +10,13 @@
 </head>
 
 <body>
-  <!-- Nvigation bar -->
+  <!-- Navigation bar -->
   <header class="navigationBar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Slack#</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBarId" aria-controls="navigationBarId"
+     <nav class="navbar navbar-fixed-top navbar-dark bg-dark navbar-expand-sm">
+      <button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navigationBarId" aria-controls="navigationBarId"
         aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+       <a class="navbar-brand" href="#"> Slack </a>
       </button>
-
       <div class="collapse navbar-collapse" id="navigationBarId">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -94,7 +92,7 @@
     </nav>
   </header>
 
-  <div class="container">
+  <div class="container-fluid">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#calendarModal">
       Calendar
@@ -105,6 +103,9 @@
     </button>
     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#reminderModal">
       Reminder
+    </button>
+    <button class="btn btn-primary btn-sm" onclick="getUserChatHistory('userId')"> 
+      Chat History 
     </button>
 
     <!-- START: Calander Modal -->
@@ -243,32 +244,20 @@
       </div>
     </div>
     <!-- END: Todolist Modal -->
-    <div id="playGround"></div>
 
-    <!-- <div id="messageHistory">
-
-    </div> -->
-    <!-- <div class="form-group">
-      <input type="text" id="messageInput" class="form-control" placeholder="Message here...">
-    </div> -->
-    
-
-
-
-
-    <div class="footer">
-      <div class="commandLineInput" id="commandLineInput">
-        <input class="form-control form-control-lg text-left" type="text" id="enteredCommand" placeholder="Message #channel...">
-        <input type="submit" id="submit" class="btn btn-success" value="Send" />
-      </div>
-      
-    </div>
-
-    <button onclick="getUserChatHistory('userId')">Click me</button>
+  <div class="container-fluid d-flex text-left containerWrapper">
+    <section id="chatLists" class="col-xs-5 col-sm-3"></section>
+    <section id="playGround" class="col-xs-7 col-sm-9 d-flex flex-column">
+        <div id="messageBody"></div>
+        <label for="enteredCommand" class="sr-only"> Text Message Area </label>
+        <div class="input-group" id="textArea">
+          <input type="text" class="form-control form-control-lg" id="enteredCommand" placeholder="Type your message here..." aria-describedby="enter">
+          <div class="input-group-append">
+            <button type="submit" id="enter" class="input-group-text" value="Send"> Send </button>
+          </div>
+        </div>
+    </section>
   </div>
-
-
-  <script src="client/public/bundle.js"></script>
+  </div>
 </body>
-
 </html>
