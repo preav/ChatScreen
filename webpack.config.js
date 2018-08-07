@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 var config = {
-  entry: ['babel-polyfill',
+  entry: ['jquery','babel-polyfill',
     './client/src/components/index.js',
     './client/src/scss/main.scss'
   ],
@@ -12,7 +12,7 @@ var config = {
   },
   module: {
     rules: [
-      {
+      /*{
         enforce: 'pre',
         test: /\.js?$/,
         exclude: [/node_modules/],
@@ -20,7 +20,7 @@ var config = {
         options: {
           fix: true,
         },
-      },
+  },*/
       {
         test: /\.js?$/,
         exclude: [/node_modules/],
@@ -65,6 +65,15 @@ var config = {
       }, {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+      }, {
+          test: require.resolve('jquery'),
+           use: [{
+              loader: 'expose-loader',
+              options: 'jQuery'
+          },{
+              loader: 'expose-loader',
+              options: '$'
+          }]
       }]
   },
   plugins: [
